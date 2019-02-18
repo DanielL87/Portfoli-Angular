@@ -4,7 +4,19 @@ import PropTypes from 'prop-types';
 function Ticket(props){
   return (
     <div>
-      <h3>{props.location} - {props.names}</h3>
+      <style jsx>{`
+        .red-text:hover {
+          color: red;
+          }
+          .red-text{
+            color: green;
+            }
+          div {
+            background-color: #dfecef;
+          }
+       `}
+      </style>
+      <h3 className="red-text">{props.location} - {props.names}</h3>
       <p><em>{props.issue}</em></p>
       <hr/>
     </div>

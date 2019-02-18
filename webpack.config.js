@@ -4,8 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 
-
-    
   entry: [
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
@@ -31,7 +29,7 @@ module.exports = {
     publicPath: '/'
   },
 
-module: {
+  module: {
     rules: [
       {
         test: /\.jsx?$/,
@@ -41,9 +39,9 @@ module: {
         options: {
           emitWarning: true,
           configFile: "./.eslintrc.json"
-          }
-        },
-        {
+        }
+      },
+      {
         test: /\.jsx?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
@@ -53,12 +51,11 @@ module: {
             "react",
           ],
           plugins: [
-            "react-hot-loader/babel",
-            "styled-jsx/babel"
+            "react-hot-loader/babel"
           ]
         }
       }
-    ]
+    ],
   },
 
   plugins: [
