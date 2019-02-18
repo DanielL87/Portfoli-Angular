@@ -3,9 +3,18 @@ import Resume from '../assets/Resume.jpg';
 
 function MySampleComponent(){
   return (
-    <div>
-      <img src={Resume}/>
-    </div>
+    <div class="container">
+      <style jsx>{`
+      img {
+        height: 50%;
+        width: 50%;
+      }
+    `}
+    </style>
+      <div>
+        <img src={Resume}/>
+      </div>
+    </div> 
   );
 }
 

@@ -1,6 +1,6 @@
 # _Portfolio with React_
 
-#### _Independent Project for Epicodus - 2/15/2019_
+#### _Independent Project for Epicodus - 2/16/2019_
 
 #### By _**Daniel Lira**_
 
