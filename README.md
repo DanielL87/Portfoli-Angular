@@ -12,7 +12,7 @@ _This coding portfolio displays information about me in 3 categories: Home, Proj
 ### Specs
 
 - _Program will display Header on all pages._
-- _Program will use React Routing to navigate between the Home page, Projects page, and Contact page._
+- _Program will use React Routing to navigate between the Home page, Projects page, and AboutMe page._
 - _Program imports images and displays them using base64 encoding._
 - _Program contains external links to Github and LinkedIn profiles._
 

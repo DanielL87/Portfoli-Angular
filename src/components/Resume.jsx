@@ -10,7 +10,7 @@ function MySampleComponent(){
         width: 50%;
       }
     `}
-    </style>
+      </style>
       <div>
         <img src={Resume}/>
       </div>

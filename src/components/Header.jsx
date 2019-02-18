@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 function Header(){
   return (
     <div>
-      <h1>Help Queue</h1>
-      <Link to="/">Home</Link> | <Link to="/newticket">Create Ticket</Link> | <Link to="/resume">Resume</Link>
+      <h1>My Portfolio</h1>
+      <Link to="/">Home</Link> | <Link to="/resume">Resume</Link> | <Link to="/aboutme">AboutMe</Link>
     </div>
   );
 }
