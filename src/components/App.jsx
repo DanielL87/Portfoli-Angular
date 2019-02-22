@@ -7,9 +7,19 @@ import ProjectList from './ProjectList';
 import Home from './Home';
 import { Switch, Route } from 'react-router-dom';
 
-function App(){
-  return (
-    <div>
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      masterTicketList: {},
+      selectedTicket: null
+    }
+  }
+
+  render() {
+
+    return (
+      <div>
       <Header/>
       <Switch>
         <Route exact path='/' component={Home} />
@@ -18,8 +28,10 @@ function App(){
         <Route path='/aboutme' component={AboutMe} />
         <Route component={Error404} />
       </Switch>
-    </div>
-  );
+      </div>
+    )
+  }
 }
 
 export default App;
+
