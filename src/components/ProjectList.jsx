@@ -2,7 +2,24 @@ import React from 'react';
 import ProjectDetails from './ProjectDetails';
 import { v4 } from 'uuid';
 
-function ProjectList () {
+class ProjectList extends React.Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      selectedProject: null
+    };
+    this.handleSelectedProject = this.handleSelectedProject.bind(this);
+  }
+  
+  handleSelectedProject(id){
+    let chosenProject = Projects[id]
+    this.setState({
+      selectedProject : chosenProject
+    })
+  }
+  
+  render() {
   return (
     <div>
       <style jsx>{`
@@ -11,16 +28,19 @@ function ProjectList () {
       <div className='container'>
         {Projects.map((x, index) =>
           <div>
-            <ProjectDetails projectName = {x.projectName}
+            <ProjectDetails 
+              projectName = {x.projectName}
               info = {x.info} 
               link = {x.link}
               key = {index}
+              selectProject = {this.handleSelectedProject}
             />
           </div>
         )}
       </div>
     </div>
-  );
+   );
+  }
 }
 
 export default ProjectList;
@@ -54,3 +74,5 @@ const Projects = [
   },
 
 ];
+
+

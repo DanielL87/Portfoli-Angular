@@ -11,7 +11,7 @@ function ProjectDetails (props) {
       `}
       </style>
       <div className='projectDetails'>
-        <h4>{props.projectName}</h4>
+        <h4  onClick={() => {props.selectProject(props.id)}}>{props.projectName}</h4>
         <p><strong>Description:</strong> {props.info}</p>
         <p id='links'><a href={props.link}>Github Link</a></p>
       </div>
@@ -24,5 +24,6 @@ export default ProjectDetails
 ProjectDetails.propTypes = {
   projectName: PropTypes.string,
   info: PropTypes.string, 
-  link: PropTypes.string
+  link: PropTypes.string,
+  project: PropTypes.func
 }
