@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function ProjectDetails (props) {
+  if (props.selectedTicket == null){
   return (
     <div>
       <style jsx>{`
@@ -12,11 +13,24 @@ function ProjectDetails (props) {
       </style>
       <div className='projectDetails'>
         <h4  onClick={() => {props.selectProject(props.id)}}>{props.projectName}</h4>
-        <p><strong>Description:</strong> {props.info}</p>
-        <p id='links'><a href={props.link}>Github Link</a></p>
-      </div>
+    </div>
     </div>
   )
+}else{
+  <div>
+  <style jsx>{`
+  h4{
+  color: blue;    
+  }
+  `}
+  </style>
+  <div className='projectDetails'>
+    <h4  onClick={() => {props.selectProject(props.id)}}>{props.projectName}</h4>
+    <p><strong>Description:</strong> {props.chosenProject.info}</p>
+    <p id='links'><a href={props.chosenProject.link}>Github Link</a></p>
+  </div>
+</div>
+}
 }
 
 export default ProjectDetails
