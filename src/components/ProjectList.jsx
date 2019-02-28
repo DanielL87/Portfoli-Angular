@@ -6,16 +6,17 @@ class ProjectList extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      selectedProject: null
+      selectedProject: null,
+      selectedProjectId: null
     };
     this.handleSelectedProject = this.handleSelectedProject.bind(this);
   }
   
   handleSelectedProject(id){
-    console.log(this.state)
     let chosenProject = Projects[id]
     this.setState({
-      selectedProject : chosenProject
+      selectedProject : chosenProject,
+      selectedProjectId : id
     })
   }
   
@@ -36,6 +37,7 @@ class ProjectList extends React.Component {
               id={index}
               selectProject = {this.handleSelectedProject}
               chosenProject={this.state.selectedProject}
+              selectedId = {this.state.selectedProjectId}
             />
           </div>
         )}

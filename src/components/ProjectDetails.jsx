@@ -2,8 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function ProjectDetails (props) {
-  if (props.selectedTicket == null){
+  if (props.chosenProject == null){
   return (
+
     <div>
       <style jsx>{`
       h4{
@@ -16,8 +17,11 @@ function ProjectDetails (props) {
     </div>
     </div>
   )
-}else{
+}else if(props.selectedId == props.id){
+
+  return(
   <div>
+  {console.log(props.chosenProject)}
   <style jsx>{`
   h4{
   color: blue;    
@@ -30,6 +34,7 @@ function ProjectDetails (props) {
     <p id='links'><a href={props.chosenProject.link}>Github Link</a></p>
   </div>
 </div>
+  )
 }
 }
 
